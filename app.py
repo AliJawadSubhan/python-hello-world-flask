@@ -1,9 +1,14 @@
 from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from requests import request
+
 
 datetime.now()
 print(datetime.now)
+resp = request.__get__("https://api.jikan.moe/v4/anime")
+print(resp)
+
 
 # app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
